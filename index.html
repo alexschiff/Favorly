@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+
+<html>
+  
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/Users/alexschiff/Box Documents/Coding/favorly/scripts.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.9.min.js"></script>
+		<title>Favorly</title>
+    
+    <style>
+      #favorForm {
+        float: left;
+        height: 800px;
+        width: 200px;
+        border: 2px solid black;
+        margin-left: 20%;
+      }
+      
+      #header {
+        height: 100px;
+        width: 100%;
+        background-color: blue;
+        margin-bottom: 50px;
+        margin-top: -25px;
+      }
+      #headertext {
+        text-align: center;
+        padding-top: 40px;
+      }
+      
+      #favorFormHeader {
+        margin-left: 20px
+      
+      }
+      
+      .field {
+        margin-left: 5px
+      }
+
+      .breaks {
+        padding: 10px;
+      }
+      
+      #table {
+        margin-left: 500px
+        
+      }
+  
+    </style>
+	</head>
+	
+	<body>
+  
+		<div id="header">
+      <h1 id="headertext">Welcome to Favorly</h1>
+		</div>
+
+		<div id="favorForm">
+      <h3 id="favorFormHeader">Favor Details</h3>
+			
+      <form id ="favorDetails" action="scripts.js" onsubmit="return theGoods()">
+      <input class="field" id="favorDebtor" size="30" type="text" placeholder="Favor Debtor"/>
+      <div class="breaks"><p>OWES</p></div>
+      <input class="field" id="favorCreditor" size="30" type="text" placeholder="Favor Creditor" />
+      <div class="breaks"><p>FOR</p></div>
+			<textarea class="field" id="story" rows=3 col=30 placeholder="What was the favor?"></textarea>
+      <div class="breaks"><p>ON</p></div>
+      <input class="field" type="date" id="date">
+      <div class="breaks"><p>AND</p></div>
+      <select class="field" id="status">
+        <option>Bitch still owes me!</option>
+        <option>We cool.</option>
+      </select>
+      </form>
+      <div class="breaks"></div>
+      <input id="submitButton" class="field" type="submit"/>
+
+		</div>
+
+<table id="table" border="2">
+
+<tr class="tableHeader">
+  <th>Debtor</th>
+  <th>Creditor</th>
+  <th>What?</th>
+  <th>Date</th>
+  <th>Status</th>
+  <th>ID</th>
+</tr>
+
+<tr class="row1">
+  <td id="row2cell1"><p id="row2cell1text"></p></td>
+  <td id="row2cell2"><p id="row2cell2text"></p></td>
+  <td id="row2cell3"><p id="row2cell3text"></p></td>
+  <td id="row2cell4"><p id="row2cell4text"></p></td>
+  <td id="row2cell5"><p id="row2cell5text"></p></td>
+  <td id="row2cell6"><p id="row2cell6text"></p></td>
+  <td id="row2cell7"><p id="row2cell7text"></p></td>
+</tr>
+
+
+</table>
+
+
+
+
+	</body>
